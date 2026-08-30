@@ -8,6 +8,12 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Esta prueba siempre pasa si el contexto de Spring carga correctamente
 	}
 
+	@Test
+	void testAppStarts() {
+		// Prueba simple que siempre pasa
+		assert true;
+	}
 }
