@@ -127,18 +127,17 @@ jobs:
           echo "Servicio: practica-despliegue"
           echo "Imagen: ${{ env.DOCKER_IMAGE }}:latest"
           
-          # Avisar a Render que descargue la nueva imagen de Docker Hub
           curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
           
           echo "Despliegue solicitado exitosamente"
-          echo "URL: https://onrender.com"
+          echo "URL: https://practica-despliegue-latest.onrender.com"
 
       - name: Resumen del despliegue
         run: |
           echo "========================================="
           echo "PIPELINE COMPLETADO EXITOSAMENTE"
           echo "========================================="
-          echo "Aplicacion: https://onrender.com"
+          echo "Aplicacion: https://practica-despliegue-latest.onrender.com"
           echo "Commit: ${{ github.sha }}"
           echo "Fecha: $(date)"
           echo "Autor: ${{ github.actor }}"
